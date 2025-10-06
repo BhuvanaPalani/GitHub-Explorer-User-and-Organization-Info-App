@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarUserInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:title="" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarUserInfo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+
+            <ImageView
+                android:id="@+id/imageViewAvatar"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:contentDescription="@string/empty"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/person" />
+
+
+            <TextView
+                android:id="@+id/textViewFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewAvatar"
+                tools:text="Humberto Linero" />
+
+
+            <TextView
+                android:id="@+id/textViewCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewFullName"
+                tools:text="Sweden" />
+
+
+            <LinearLayout
+                android:id="@+id/statsRow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewCountry">
+
+
+                <LinearLayout
+                    android:id="@+id/containerFollowers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingVertical="4dp">
+
+                    <TextView
+                        android:id="@+id/textViewFollowersLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:breakStrategy="simple"
+                        android:ellipsize="end"
+                        android:hyphenationFrequency="none"
+                        android:maxLines="1"
+                        android:text="@string/followers"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textViewFollowersValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        tools:text="17" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/containerFollowing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingVertical="4dp">
+
+                    <TextView
+                        android:id="@+id/textViewFollowingLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:breakStrategy="simple"
+                        android:ellipsize="end"
+                        android:hyphenationFrequency="none"
+                        android:maxLines="1"
+                        android:text="@string/following"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textViewFollowingValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        tools:text="1" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/containerRepos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingVertical="4dp">
+
+                    <TextView
+                        android:id="@+id/textViewReposLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:breakStrategy="simple"
+                        android:ellipsize="end"
+                        android:hyphenationFrequency="none"
+                        android:maxLines="1"
+                        android:text="@string/repositories"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textViewReposValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        tools:text="9" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textViewAboutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/about"
+                android:textColor="@color/merigold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statsRow" />
+
+            <TextView
+                android:id="@+id/textViewAboutBody"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="4dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewAboutTitle"
+                tools:text="Teaching Python and Android development..." />
+
+
+            <TextView
+                android:id="@+id/textViewBasicsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/basics"
+                android:textColor="@color/merigold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewAboutBody" />
+
+
+            <ImageView
+                android:id="@+id/imageViewTwitterIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/twitter_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBasicsTitle"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewTwitterValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewTwitterIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageViewTwitterIcon"
+                app:layout_constraintTop_toTopOf="@id/imageViewTwitterIcon"
+                tools:text="" />
+
+
+            <ImageView
+                android:id="@+id/imageViewWebsiteIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/website_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewTwitterIcon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewWebsiteValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewWebsiteIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageViewWebsiteIcon"
+                app:layout_constraintTop_toTopOf="@id/imageViewWebsiteIcon"
+                tools:text="https://medium.com/@hlinero" />
+
+
+            <ImageView
+                android:id="@+id/imageViewHireableIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/hireable_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewWebsiteIcon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewHireableValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewHireableIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageViewHireableIcon"
+                app:layout_constraintTop_toTopOf="@id/imageViewHireableIcon"
+                tools:text="❌ Not hireable" />
+
+
+            <ImageView
+                android:id="@+id/imageViewCompanyIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/company_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewHireableIcon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewCompanyValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewCompanyIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageViewCompanyIcon"
+                app:layout_constraintTop_toTopOf="@id/imageViewCompanyIcon"
+                tools:text="Linero Tech AB" />
+
+
+            <TextView
+                android:id="@+id/textViewTopLangTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/top_3_languages"
+                android:textColor="@color/merigold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewCompanyIcon" />
+
+            <LinearLayout
+                android:id="@+id/langTextRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewTopLangTitle">
+
+                <TextView
+                    android:id="@+id/textViewLang1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:textSize="16sp"
+                    tools:text="Kotlin" />
+
+                <TextView
+                    android:id="@+id/textViewLang2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:textSize="16sp"
+                    tools:text="Python" />
+
+                <TextView
+                    android:id="@+id/textViewLang3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    tools:text="Java" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

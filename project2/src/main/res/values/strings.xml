@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name" translatable="false">Module 202 - Project 2</string>
+    <string name="search_github_username">Search GitHub username</string>
+    <string name="section_title">Section Title</string>
+    <string name="github_logo">github_logo</string>
+    <string name="chip">Chip</string>
+    <string name="company">Company</string>
+    <string name="cd_user_avatar" />
+    <string name="section_about" />
+    <string name="section_basics" />
+    <string name="section_top_languages" />
+    <string name="label_following" />
+    <string name="label_repositories" />
+    <string name="label_followers" />
+    <string name="value_not_available" />
+    <string name="hireable_yes_with_icon" />
+    <string name="hireable_no_with_icon" />
+    <string name="loading" />
+    <string name="empty" />
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="repositories">Repositories</string>
+    <string name="about">About</string>
+    <string name="basics">Basics</string>
+    <string name="top_3_languages">Top 3 Languages</string>
+    <string name="owner_avatar">Owner avatar</string>
+    <string name="repository_name">Repository Name</string>
+    <string name="description">Description</string>
+    <string name="kotlin">Kotlin</string>
+</resources>
